@@ -16,20 +16,22 @@ public class App {
             System.out.printf("A[%d]:",i);
             arrA[i] = sc.nextInt();
         }
-        for(int i = 0; i < arrA.length - 1; i++)
+        for(int i = 0; i < kichthuocmang - 1; i++)
             {
-                for(int j = i + 1; j < kichthuocmang; j++)
+                for(int j = i + 1; j <= kichthuocmang - 1; j++)
                 {
                     int trunggian;
                     if (arrA[i] > arrA[j])
                     {
                     trunggian = arrA[i];
-                    arrA[j] = arrA[i];
+                    arrA[i] = arrA[j];
                     arrA[j] = trunggian;
                     }
-                }
-                System.out.printf("%d\t", arrA[i]);
+                }  
             }
+        for(int i = 0; i < kichthuocmang; i++){
+            System.out.printf("%d\t", arrA[i]);
+        }    
         }
     }
 }
